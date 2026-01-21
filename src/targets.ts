@@ -13,7 +13,8 @@ async function getMediaFile(dir: string): Promise<string | null> {
                 && VALID_IMAGES.includes(file.name.substring(file.name.lastIndexOf('.')+1)))
             .map((file) => file.name);
         if (images.length === 0) return null;
-        return images[images.length === 1 ? 0 : Math.floor(Math.random() * images.length)];
+        const image = images[images.length === 1 ? 0 : Math.floor(Math.random() * images.length)];
+        return path.join(dir, image);
     } catch {
         return null;
     }

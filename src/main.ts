@@ -1,7 +1,7 @@
 import { getTarget } from './targets'
 import { twitterPost } from './processor/twitter';
 import * as path from 'path';
-import {parseConfig} from "./config";
+import { parseConfig } from './config';
 
 async function main() {
     const args = process.argv.slice(2);
@@ -11,7 +11,7 @@ async function main() {
     if (args.length > 0 && args[0] === '--dry-run') {
         return;
     }
-    await twitterPost(config.Twitter, target);
+    if(config.Twitter) await twitterPost(config.Twitter, target);
 }
 
 main();
