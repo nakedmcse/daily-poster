@@ -1,0 +1,10 @@
+# Config
+# Twitter Auth
+Twitter:
+  appKey: your-twitter-appkey
+  appSecret: your-twitter-appsecret
+  accessToken: your-twitter-accesstoken
+  accessSecret: your-twitter-accesssecret
+
+# Files path
+FilesPath: files

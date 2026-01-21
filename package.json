@@ -1,0 +1,24 @@
+{
+  "name": "daily-poster",
+  "version": "1.0.0",
+  "description": "Daily Poster Bot",
+  "homepage": "https://github.com/nakedmcse/daily-poster#readme",
+  "bugs": {
+    "url": "https://github.com/nakedmcse/daily-poster/issues"
+  },
+  "license": "MIT",
+  "author": "Walker",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "post": "ts-node src/main.ts",
+    "dryrun": "ts-node src/main.ts --dry-run",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "twitter-api-v2": "^1.29.0",
+    "typescript": "^5.9.3",
+    "yaml": "^2.8.2"
+  }
+}
