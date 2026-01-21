@@ -1,10 +1,15 @@
 # Config
-# Twitter Auth
+# Twitter Auth (optional)
 Twitter:
   appKey: your-twitter-appkey
   appSecret: your-twitter-appsecret
   accessToken: your-twitter-accesstoken
   accessSecret: your-twitter-accesssecret
+
+# Bluesky Auth (optional)
+Bluesky:
+  identifier: your-bsky-username
+  password: your-bsky-password
 
 # Files path
 FilesPath: files

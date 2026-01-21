@@ -1,6 +1,6 @@
 # daily-poster
 A daily poster bot that takes a given folder of image folders and quotes
-and makes a random post to twitter.
+and makes a random post to the configured services (twitter and bluesky).
 
 ## Features
 * **Images**: Posts a random image from the image folders
@@ -13,18 +13,25 @@ git clone https://github.com/nakedmcse/daily-poster.git
 cd daily-poster
 npm install
 ```
-Edit `config.yaml` with your twitter API credentials and files directory location:
+Edit `config.yaml` with your API credentials and files directory location:
 ```yaml
-# Twitter Auth
+# Twitter Auth (optional)
 Twitter:
   appKey: your-twitter-appkey
   appSecret: your-twitter-appsecret
   accessToken: your-twitter-accesstoken
   accessSecret: your-twitter-accesssecret
 
+# Bluesky Auth (optional)
+Bluesky:
+  identifier: your-bsky-username
+  password: your-bsky-password
+  
 # Files path
 FilesPath: files
 ```
+API access is supported for twitter and bluesky.  The sections are optional and will only be
+used if they are present.
 
 ### 2. Add Images and Quotes
 In the `FilesPath` create folders for each of your characters, and in those folders 

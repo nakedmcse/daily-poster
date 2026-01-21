@@ -3,7 +3,7 @@ import { parse } from 'yaml';
 import { readdir, readFile, access } from 'fs/promises';
 import * as path from 'path';
 
-const VALID_IMAGES = ["png","jpg","jpeg","webp"];
+const VALID_IMAGES = ["png","jpg","jpeg","webp","gif"];
 
 async function getMediaFile(dir: string): Promise<string | null> {
     try {

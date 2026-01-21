@@ -1,5 +1,6 @@
 import { AtpAgent } from '@atproto/api';
 import { TargetSend, BSkyAuth } from '../types';
+import { getMimeType } from '../utils';
 import { readFile } from 'fs/promises';
 
 export async function blueskyPost(auth: BSkyAuth, target: TargetSend)  {
@@ -8,7 +9,8 @@ export async function blueskyPost(auth: BSkyAuth, target: TargetSend)  {
         await agent.login(auth);
         if (target.filePath) {
             const image = await readFile(target.filePath);
-            const { data } = await agent.uploadBlob(image, { encoding: 'image/jpeg' });  //TODO: get mime type from file
+            const mime = await getMimeType(target.filePath) ?? "octet-stream";
+            const { data } = await agent.uploadBlob(image, { encoding: mime });
             await agent.post({
                 text: target.quote ?? "",
                 createdAt: new Date().toISOString(),
