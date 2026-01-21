@@ -5,8 +5,14 @@ export interface TwitterAuth {
     accessSecret: string;
 }
 
+export interface BSkyAuth {
+    identifier: string;
+    password: string;
+}
+
 export interface Config {
     Twitter: TwitterAuth;
+    Bluesky: BSkyAuth;
     FilesPath: string;
 }
 

@@ -1,5 +1,6 @@
 import { getTarget } from './targets'
 import { twitterPost } from './processor/twitter';
+import { blueskyPost } from './processor/bluesky';
 import * as path from 'path';
 import { parseConfig } from './config';
 
@@ -12,6 +13,7 @@ async function main() {
         return;
     }
     if(config.Twitter) await twitterPost(config.Twitter, target);
+    if(config.Bluesky) await blueskyPost(config.Bluesky, target);
 }
 
 main();
