@@ -10,9 +10,15 @@ export interface BSkyAuth {
     password: string;
 }
 
+export interface ThreadsAuth {
+    username: string;
+    password: string;
+}
+
 export interface Config {
     Twitter: TwitterAuth;
     Bluesky: BSkyAuth;
+    Threads: ThreadsAuth;
     FilesPath: string;
 }
 

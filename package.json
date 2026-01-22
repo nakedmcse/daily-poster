@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@atproto/api": "^0.18.16",
+    "threads-api": "^1.6.3",
     "ts-node": "^10.9.2",
     "twitter-api-v2": "^1.29.0",
     "typescript": "^5.9.3",

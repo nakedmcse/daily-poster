@@ -11,5 +11,10 @@ Bluesky:
   identifier: your-bsky-username
   password: your-bsky-password
 
+# Threads Auth (optional)
+Threads:
+  username: your-threads-username
+  password: your-threads-password
+
 # Files path
 FilesPath: files

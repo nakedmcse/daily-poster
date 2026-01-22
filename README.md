@@ -1,6 +1,6 @@
 # daily-poster
 A daily poster bot that takes a given folder of image folders and quotes
-and makes a random post to the configured services (twitter and bluesky).
+and makes a random post to the configured services (twitter, bluesky and threads).
 
 ## Features
 * **Images**: Posts a random image from the image folders
@@ -26,12 +26,17 @@ Twitter:
 Bluesky:
   identifier: your-bsky-username
   password: your-bsky-password
-  
+
+# Threads Auth (optional)
+Threads:
+  username: your-threads-username
+  password: your-threads-password
+
 # Files path
 FilesPath: files
 ```
-API access is supported for twitter and bluesky.  The sections are optional and will only be
-used if they are present.
+API access is supported for twitter, bluesky and threads.  The sections are optional and will only be
+used if they are present.  You will need to comment out or remove the credential sections you do not use.
 
 ### 2. Add Images and Quotes
 In the `FilesPath` create folders for each of your characters, and in those folders 
